@@ -1,0 +1,90 @@
+experiment=aimer-v3-gf-inv-fixed-addition-chain-cortex-m7-continuation
+result_directory=m7-gf-inv-20260914-133657
+measurement_started=2026-09-14 13:44:07 KST (+0900)
+measurement_finished=2026-09-14 15:36:54 KST (+0900)
+report_completed=2026-09-14 15:45:19 KST (+0900)
+previous_result_preserved=benchmark/results/m7-gf-inv-20260914-120916
+git_commit=82b54794a8cdb71ff095cc0d21579dbea26e89cc
+git_remote=https://github.com/Lee-Seungwon1215/AIMer_aim3.git
+
+board=ST NUCLEO-F767ZI
+mcu=STM32F767ZIT6
+board_identity_note=Board/package inferred from NUCLEO-F767ZI ST-LINK/VCP wiring plus CPUID/device-ID/Flash-size evidence; silicon ID alone reports STM32F76x/77x.
+cpuid=0x411fc270
+core=Cortex-M7 r1p0
+dbgmcu_idcode=0x10016451
+device_id=0x451
+flash_bytes=2097152
+sram_bytes=524288
+dtcm_bytes=131072
+sram1_bytes=376832
+sram2_bytes=16384
+itcm_bytes=16384
+backup_sram_bytes_excluded=4096
+
+cpu_hz=160000000
+clock_source=HSI 16 MHz -> PLL M=8 N=160 P=2 -> SYSCLK/HCLK 160 MHz
+dynamic_frequency_changes=disabled
+rcc_cfgr=0x0000940a
+flash_wait_states=7
+flash_prefetch=enabled
+flash_art_accelerator=enabled
+flash_acr=0x00000307
+icache=enabled
+dcache=enabled
+scb_ccr=0x00070200
+itcm_used=no
+code_placement=internal Flash at 0x08000000
+data_placement=.data/.bss/heap in contiguous 0x20000000 SRAM range; stack top 0x20080000
+stack_reserved_bytes=32768
+interrupts=disabled globally before benchmark execution
+dwt_cyccnt=available, unlocked, enabled, increment verified
+dwt_counter_bits=32
+dwt_max_observed_cycles=92653150
+dwt_max_observed_seconds_at_160mhz=0.5790821875
+dwt_timing_overhead=barrier and CYCCNT read overhead retained; no subtraction
+
+compiler=arm-none-eabi-gcc (xPack GNU Arm Embedded GCC arm64) 15.2.1 20251203
+cflags=-O3 -std=c11 -mcpu=cortex-m7 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -fno-lto -ffunction-sections -fdata-sections -fstack-usage
+lto=disabled
+fpu=FPv5-D16 double-precision FPU
+float_abi=hard
+debugger=ST-LINK/V2-1 V2J39M27
+stlink_serial=REDACTED_FROM_PUBLISHED_RESULTS
+uart=ST-LINK USB virtual COM port at 115200 8N1; local device path omitted
+flashing_tool=xPack OpenOCD 0.12.0+dev-02228-ge5888bda3-dirty (2025-10-04-22:45)
+linker_script=benchmark/m7/stm32f767zi.ld
+linker_memory=FLASH 0x08000000 2048K; RAM 0x20000000 512K; stack top 0x20080000
+
+independent_runs=30
+samples_per_run=50
+implementation_order=odd runs Reference-Optimized (A-B); even runs Optimized-Reference (B-A)
+run_boundary=firmware flash and reset
+kernel_warmup_calls_per_operation=100
+e2e_warmup_calls_per_operation=3
+kernel_inputs=fixed SplitMix64 inputs prepared before timing
+e2e_inputs=fixed message and fixed NIST DRBG seed initialized before timing
+e2e_rng_note=unmodified API-internal randombytes cost remains inside keypair/sign E2E timing
+uart_output=outside all timed regions
+checksum_sink=outside all timed regions, retained and paired across implementations
+outlier_removal=none
+tuning_after_observation=none
+statistics=overall sample median; all-sample SD/CV; 30 run-median SD/CV; 10000-replicate paired run-median bootstrap ratio CI
+bootstrap_replicates=10000
+
+controls_raw_samples=18000
+kernel_raw_samples=9000
+e2e_raw_samples=30000
+total_raw_samples=57000
+firmware_runs=540
+paired_configurations=270
+smoke_samples_in_statistics=no
+
+reference_field_common_sha256=6b9cc4bd712781e0a13c283e20e01c123452e2c6dfad1ad852468a55da50751f
+optimized_field_common_sha256=6f9f4cccf287998b9bea4eb279c65bcd3d611a72c38e3f065742e1dcb4563d84
+linker_script_sha256=7b941bbdd011710d3fe22f05e736af07aad9959e86c0389b258ebcc0c16b9af6
+reference_implementation_modified=no
+optimized_existing_addition_chain_modified=no
+x86_code_or_results_modified=no
+commit_created_at_measurement_time=no
+github_push_at_measurement_time=no
